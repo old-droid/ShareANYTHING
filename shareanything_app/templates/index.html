@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareANYTHING</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ShareANYTHING</h1>
+
+        <section class="upload-section">
+            <h2>Upload File</h2>
+            <input type="file" id="fileInput">
+            <button id="uploadButton">Upload</button>
+            <div id="uploadStatus"></div>
+            <div id="shareKeyContainer" style="display: none;">
+                <p>Share this key:</p>
+                <input type="text" id="shareKey" readonly>
+                <button id="copyKeyButton">Copy Key</button>
+            </div>
+        </section>
+
+        <section class="download-section">
+            <h2>Receive File</h2>
+            <input type="text" id="downloadKey" placeholder="Enter share key">
+            <button id="downloadButton">Download</button>
+            <div id="downloadStatus"></div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
